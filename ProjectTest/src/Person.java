@@ -11,10 +11,19 @@ public class Person {
         this.age = age;
     }
 
-    public Boolean isAdult() {
-        Boolean adult = false;
-        if(this.age >= 18) adult = true;
-        return adult;
+    public Person(String name, String surname, int age, boolean vegan) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.vegan = vegan;
+    }
+
+    public boolean isAdult() {
+        return this.age >= 18;
+    }
+
+    public void sayHelloPerson() {
+         System.out.println("Hello " + this.name + " " + this.surname);
     }
 
     public String getName() {
@@ -41,7 +50,7 @@ public class Person {
         this.age = age;
     }
 
-    public Boolean getVegan() {
+    public boolean getVegan() {
         return vegan;
     }
 
