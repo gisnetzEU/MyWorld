@@ -26,35 +26,34 @@ public class Person {
          System.out.println("Hello " + this.getName() + " " + this.getSurname());
     }
 
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getName() {
+        return this.name;
     }
 
     public void setSurname(String surname) {
         this.surname = surname;
     }
 
-    public int getAge() {
-        return age;
+    public String getSurname() {
+        return this.surname;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public boolean getVegan() {
-        return vegan;
+    public int getAge() {
+        return this.age;
     }
 
     public void setVegan(Boolean vegan) {
         this.vegan = vegan;
     }
+
+    public boolean getVegan() { return this.vegan; }
+
 }
