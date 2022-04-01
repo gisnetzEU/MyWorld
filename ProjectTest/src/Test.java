@@ -4,11 +4,11 @@ public class Test {
 
         Person david = new Person("David", "López", 25);
         david.sayHelloPerson();
-        System.out.println(david.name + " is adult? " + david.isAdult());
+        System.out.println(david.getName() + " is adult? " + david.isAdult());
 
         Person alex = new Person("Alex", "Picanyol", 40, false);
         alex.sayHelloPerson();
-        System.out.println(alex.name + " is adult? " + alex.isAdult());
+        System.out.println(alex.getName() + " is adult? " + alex.isAdult());
 
         hello();
 

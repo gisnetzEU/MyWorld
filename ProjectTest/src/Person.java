@@ -1,9 +1,9 @@
 public class Person {
 
-    String name;
-    String surname;
-    int age;
-    Boolean vegan;
+    private String name;
+    private String surname;
+    private int age;
+    private Boolean vegan;
 
     public Person(String name, String surname, int age) {
         this.name = name;
@@ -19,11 +19,11 @@ public class Person {
     }
 
     public boolean isAdult() {
-        return this.age >= 18;
+        return this.getAge() >= 18;
     }
 
     public void sayHelloPerson() {
-         System.out.println("Hello " + this.name + " " + this.surname);
+         System.out.println("Hello " + this.getName() + " " + this.getSurname());
     }
 
     public String getName() {
