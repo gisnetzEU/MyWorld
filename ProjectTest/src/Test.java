@@ -4,11 +4,17 @@ public class Test {
 
         Person david = new Person("David", "López", 25);
         david.sayHelloPerson();
-        System.out.print(david.name + " is adult? " + david.isAdult());
+        System.out.println(david.name + " is adult? " + david.isAdult());
 
         Person alex = new Person("Alex", "Picanyol", 40, false);
         alex.sayHelloPerson();
-        System.out.print(alex.name + " is adult? " + alex.isAdult());
+        System.out.println(alex.name + " is adult? " + alex.isAdult());
 
+        hello();
+
+    }
+
+    public static void hello() {
+        System.out.println("Hello, I'm a public static method available from anywhere to any class or method.");
     }
 }
