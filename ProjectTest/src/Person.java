@@ -61,7 +61,7 @@ public class Person {
          System.out.println("Hello " + this.getName() + " " + this.getSurname());
     }
 
-    //Getters ans Setters
+    //Getters and Setters
     public void setName(String name) {
         this.name = name;
     }
