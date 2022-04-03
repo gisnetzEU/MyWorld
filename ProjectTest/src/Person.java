@@ -1,9 +1,18 @@
+import java.util.ArrayList;
+
 public class Person {
 
+    //Attributes
     private String name;
     private String surname;
     private int age;
-    private Boolean vegan;
+    private boolean vegan;
+    private Car car;
+    private ArrayList<Pet> pets = new ArrayList<>();
+
+    //Constructors
+    public Person() {
+    }
 
     public Person(String name, String surname, int age) {
         this.name = name;
@@ -18,6 +27,32 @@ public class Person {
         this.vegan = vegan;
     }
 
+    public Person(String name, String surname, int age, boolean vegan, Car car) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.vegan = vegan;
+        this.car = car;
+    }
+
+    public Person(String name, String surname, int age, boolean vegan, ArrayList<Pet> pets) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.vegan = vegan;
+        this.pets = pets;
+    }
+
+    public Person(String name, String surname, int age, boolean vegan, Car car, ArrayList<Pet> pets) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.vegan = vegan;
+        this.car = car;
+        this.pets = pets;
+    }
+
+    //Methods
     public boolean isAdult() {
         return this.getAge() >= 18;
     }
@@ -26,6 +61,7 @@ public class Person {
          System.out.println("Hello " + this.getName() + " " + this.getSurname());
     }
 
+    //Getters ans Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -56,4 +92,19 @@ public class Person {
 
     public boolean getVegan() { return this.vegan; }
 
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public ArrayList<Pet> getPets() {
+        return pets;
+    }
+
+    public void setDogs(ArrayList<Pet> pets) {
+        this.pets = pets;
+    }
 }
