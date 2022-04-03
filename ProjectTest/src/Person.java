@@ -61,6 +61,8 @@ public class Person {
          System.out.println("Hello " + this.getName() + " " + this.getSurname());
     }
 
+    public void printName() { System.out.println("This person 's name is: " + " "  + this.name  + " "  + this.surname); }
+
     //Getters and Setters
     public void setName(String name) {
         this.name = name;
