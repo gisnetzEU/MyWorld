@@ -58,10 +58,24 @@ public class Person {
     }
 
     public void sayHelloPerson() {
-         System.out.println("Hello " + this.getName() + " " + this.getSurname());
+        System.out.println("Hello " + this.getName() + " " + this.getSurname());
     }
 
-    public void printName() { System.out.println("This person 's name is: " + " "  + this.name  + " "  + this.surname); }
+    public void sayHello() {
+        System.out.println("Hello");
+    }
+
+    public void printName() {
+        System.out.println("This person 's name is: " + " " + this.name + " " + this.surname);
+    }
+
+    public void printPerson() {
+        System.out.println(this.getName() + " " + this.getSurname() + " " + this.car.getMake() + " " + this.car.getYear() + " " + this.pets.get(0).getName());
+    }
+
+    public void addPet(Pet pet) {
+        this.pets.add(pet);
+    }
 
     //Getters and Setters
     public void setName(String name) {
@@ -92,7 +106,9 @@ public class Person {
         this.vegan = vegan;
     }
 
-    public boolean getVegan() { return this.vegan; }
+    public boolean getVegan() {
+        return this.vegan;
+    }
 
     public Car getCar() {
         return car;
@@ -106,7 +122,7 @@ public class Person {
         return pets;
     }
 
-    public void setDogs(ArrayList<Pet> pets) {
+    public void setPets(ArrayList<Pet> pets) {
         this.pets = pets;
     }
 }
