@@ -70,7 +70,11 @@ public class Person {
     }
 
     public void printPerson() {
-        System.out.println(this.getName() + " " + this.getSurname() + " " + this.car.getMake() + " " + this.car.getYear() + " " + this.pets.get(0).getName());
+        if(this.pets.size() > 0 ) {
+            System.out.println(this.getName() + " " + this.getSurname() + " " + this.car.getMake() + " " + this.car.getYear() + " " + this.pets.get(0).getName());
+        } else {
+            System.out.println(this.getName() + " " + this.getSurname() + " " + this.car.getMake() + " " + this.car.getYear());
+        }
     }
 
     public void addPet(Pet pet) {

@@ -14,11 +14,11 @@ public class Test {
         */
 
         hello();
-        //I dont know the value of the fields of this person david
+        //I don't know the value of the fields of this person david
         Person david = new Person();
 
         Person alex = new Person("Alex", "Lopez", 25, true, new Car ("Jaguar", 1966));
-        //alex.printPerson();
+        alex.printPerson();
 
         Car citroen = new Car ("Citroen Picassa", 2010);
 
