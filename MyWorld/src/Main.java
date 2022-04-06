@@ -16,11 +16,27 @@ public class Main {
 
             //call operation changePinInputOutput
 
-            // call operation transferInputOutput
+            //call operation transferInputOutput
 
-            // call operation add money to depositInputOutput
+            //call operation add money to depositInputOutput
 
         }
+    }
+
+    public static void createUserInputOutput(Scanner scanner) {
+
+    }
+
+    public static void changePinInputOutput(Scanner scanner) {
+
+    }
+
+    public static void transferInputOutput(Scanner scanner) {
+
+    }
+
+    public static void depositInputOutput(Scanner scanner) {
+
     }
 
     public static void createUser() {
@@ -36,22 +52,6 @@ public class Main {
     }
 
     public static void deposit() {
-
-    }
-
-    public static void createUserInputOutput() {
-
-    }
-
-    public static void changePinInputOutput() {
-
-    }
-
-    public static void transferInputOutput() {
-
-    }
-
-    public static void depositInputOutput() {
 
     }
 }
