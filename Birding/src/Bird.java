@@ -6,10 +6,10 @@ public class Bird {
     private int observations;
 
     //constructor
-    public Bird(String name, String nameLatin, int observations) {
+    public Bird(String name, String nameLatin) {
         this.name = name;
         this.nameLatin = nameLatin;
-        this.observations = observations;
+        this.observations = 0;
     }
 
     //methods
