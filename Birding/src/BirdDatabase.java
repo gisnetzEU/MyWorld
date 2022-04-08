@@ -27,6 +27,7 @@ public class BirdDatabase {
     }
 
     public void addBirdToDatabase(Bird bird) {
+
         this.database.put(bird.getName(), bird);
     }
 

@@ -25,7 +25,7 @@ public class Main {
             } else if (command.equals("Show")) {
                 show(scanner,db);
             } else if (command.equals("Statistics")) {
-                statistics(scanner,db);
+                statistics(db);
             } else {
                 System.out.println("Unknown command!");
             }
@@ -59,10 +59,11 @@ public class Main {
         System.out.println(bird.toString());
     }
 
-    public static void statistics(Scanner input, BirdDatabase db) {
-        String birdName = ask(input, "Give bird's name to display observations count: ");
+    public static void statistics(BirdDatabase db) {
+        /*String birdName = ask(input, "Give bird's name to display observations count: ");
         Bird bird = db.getBirdsDatabase().get(birdName);
-        System.out.println("Current observations for " + birdName + " are " + bird.getObservations());
+        System.out.println("Current observations for " + birdName + " are " + bird.getObservations());*/
+        System.out.println(db);
     }
 
 }
