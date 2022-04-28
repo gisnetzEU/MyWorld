@@ -13,7 +13,19 @@ public class User {
     String phoneNumber;
     String status;
 
+    /*
     public User(String name, String surname, String birthdate, String address, String email, String phoneNumber) {
+        this.idNumber = Objects.hash();
+        this.name = name;
+        this.surname = surname;
+        this.birthdate = birthdate;
+        this.address = address;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.status = "enabled";
+    }*/
+
+    public User(String name, String surname, String birthdate, String address, String email, String phoneNumber, String status, Card card) {
         this.idNumber = Objects.hash();
         this.name = name;
         this.surname = surname;

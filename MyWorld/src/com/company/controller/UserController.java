@@ -15,13 +15,17 @@ public class UserController {
 
         String name = dataToCreateUser.get("name");
         String surname = dataToCreateUser.get("surname");
-        int age = Integer.parseInt(dataToCreateUser.get("age"));
+        String birthdate = dataToCreateUser.get("birthdate");
+        String address = dataToCreateUser.get("address");
+        String email =dataToCreateUser.get("email");
+        String phoneNumber= dataToCreateUser.get("phoneNumber");
+        String status = dataToCreateUser.get("status");
         long cardNumber = Long.parseLong((dataToCreateUser.get("cardNumber")));
         double amount = Double.parseDouble(dataToCreateUser.get("amount"));
         String cardType = dataToCreateUser.get("cardType");
 
         //Let s introduce data to create User
-        User createdUser = new User(name, surname, age, new Card(cardNumber, amount, cardType));
+        User createdUser = new User(name, surname, birthdate, address, email, phoneNumber, status, new Card(cardNumber, amount, cardType));
 
         //Let s add this new User object to the main (and just one) array
         boolean statusOperation = users.add(createdUser);
@@ -64,7 +68,7 @@ public class UserController {
         //
         long originCardNumber = Long.valueOf((dataToTransfer.get("originCardNumber")));
         long destinationCardNumber = Long.valueOf((dataToTransfer.get("destinationCardNumber")));
-        double amount = Double.parseDouble(dataToTransfer.get("amount"));
+        Double amount = Double.parseDouble(dataToTransfer.get("amount"));
 
         int originPosition = UserService.isCardNumber(originCardNumber, users);
         boolean isOriginCardNumber = originPosition > -1;
@@ -118,7 +122,7 @@ public class UserController {
 
         if (isOriginCardNumber) {
             double balance = users.get(originPosition).getCard().getAmount();
-            UserService.makeDeposit(originPosition, amount, users);
+            UserService.makeDeposit(originPosition,  Double.parseDouble(amount), users);
             double balanceAfterDeposit = users.get(originPosition).getCard().getAmount();
 
             depositResponse.put("message", "Deposit " + originCardNumber + " of " + amount + ". Balance account: " + balance + " to " + balanceAfterDeposit);
@@ -135,10 +139,10 @@ public class UserController {
 
     public static void createFakeUsers() {
         //just to work with them, no having a void arraylist
-        User newUser1 = new User("Alex", "Pixel", 25, new Card(1234123412341234L, 500.00, "Visa"));
-        User newUser2 = new User("Thomas", "Edison", 35, new Card(4321432143214321L, 1500.00, "Master Card"));
-        User newUser3 = new User("Susan", "Lane", 46, new Card(1111222233334444L, 2500.00, "American Express"));
-        User newUser4 = new User("Marta", "Gross", 86, new Card(4444333322221111L, 1900.00, "American Express"));
+        User newUser1 = new User("Alex", "Pixel", "1987-07-30", "Muntaner 555, 08032, Barcelona", "alex.pixel@gmail.com","619111435", "enabled",new Card(1234123412341234L, 500.00, "Visa"));
+        User newUser2 = new User("Thomas", "Edison", "1982-07-30", "Carrer del Comte de Sert, 25, 08035, Barcelona", "Thomas@gmail.com", "653111345", "enabled", new Card(4321432143214321L, 1500.00, "Master Card"));
+        User newUser3 = new User("Susan", "Lane", "1977-07-30", "Paseo de Gracia, 43, 08007 Barcelona", "lane@msn.com", "932 160 306", "enabled", new Card(1111222233334444L, 2500.00, "American Express"));
+        User newUser4 = new User("Marta", "Gross", "1980-07-30", "Paseo de Gracia, 92, 08008 Barcelona", "Martha.L@hotmail.com", "932 14 25 76", "enabled", new Card(4444333322221111L, 1900.00, "American Express"));
         users.add(newUser1);
         users.add(newUser2);
         users.add(newUser3);
